@@ -2,9 +2,9 @@
 
 "Building AI-powered APIs that scale across TV, film, and theme parks!"
 
-🎬 Business Context: AI in NBCUniversal
+🎬 Business Context: AI in StreamOasis
 
-Machine learning at NBCUniversal drives:
+Machine learning at StreamOasis drives:
 
     ✅ Real-time personalization (Peacock’s AI-powered recommendations).
     ✅ Smart content tagging (Auto-generating metadata for Bravo, USA Network, SYFY).
