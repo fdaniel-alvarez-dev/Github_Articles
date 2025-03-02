@@ -1,6 +1,6 @@
 # 🚀 Building Enterprise-Grade RESTful APIs with FastAPI & LLM Integrations
 
-## 1️⃣ Problem Scenario (Contexto NBCU)
+## 1️⃣ Problem Scenario (Contexto StreamOasis)
 
 Imagine handling **real-time content recommendations** across **10M+ users** on a streaming platform. Traditional search mechanisms fall short in:
 
