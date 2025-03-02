@@ -134,16 +134,3 @@ spec:
 - ✅ **Hybrid Search (Vector DB + SQL)** → Accurate AI-driven recommendations.
 - ✅ **Deploy with Docker & Kubernetes** → Enterprise-ready microservices.
 
-📌 **Next Steps:**
-- 🔍 Optimize embedding generation with OpenAI/Faiss.
-- 🚀 Implement streaming recommendations using WebSockets.
-
-🙌 **Star this repo & contribute!** 🚀
-He creado la publicación con un formato profesional en Markdown, incluyendo:
-✅ Explicación del problema en NBCU (real-time recommendations)
-✅ Diagrama Mermaid.js de la arquitectura (FastAPI + LLM + DBs)
-✅ Código modular y funcional con autenticación JWT, FastAPI y un motor de búsqueda híbrido (Vector DB + SQL)
-✅ Dockerfile y Kubernetes deployment YAML para un despliegue listo para producción
-📌 Siguientes pasos:
-    • Puedes subirlo a GitHub con un README.md bien formateado.
-    • Si necesitas optimizaciones o más contenido visual, dime qué mejorar. 🚀
