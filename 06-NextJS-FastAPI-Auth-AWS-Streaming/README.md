@@ -9,6 +9,8 @@
     Implements refresh token rotation to maintain long-lived sessions securely.
 
 📜 Architecture Diagram (MermaidJS)
+graph TD; User-->Frontend[Next.js UI] Frontend-->|JWT Token| API[FastAPI Backend] API-->|Verify Token| AuthService[Auth Microservice] AuthService-->|Issue New Token| API API-->Database[(PostgreSQL User DB)] 💡 Key Innovation Uses JWT + refresh tokens for scalable, serverless authentication, reducing latency in cloud-native AI deployments.
+
 💡 Key Innovation
 
 Uses JWT + refresh tokens for scalable, serverless authentication, reducing latency in cloud-native AI deployments.
@@ -45,6 +47,8 @@ async def secure_endpoint(token: str = Depends(oauth2_scheme)):
     Optimized for low-latency inference requests from LLMs.
 
 📜 Architecture Diagram (MermaidJS)
+ sequenceDiagram participant User participant Next.js participant FastAPI participant LLM User->>Next.js: Request AI-generated caption Next.js->>FastAPI: Fetch response (streaming) FastAPI->>LLM: Request AI completion LLM-->>FastAPI: Streaming tokens FastAPI-->>Next.js: Send real-time response Next.js-->>User: Display AI-generated text
+ 
 💡 Key Innovation
 
 Implements token streaming from LLMs for real-time AI-generated captions and subtitles in media applications.
@@ -76,6 +80,8 @@ async def get_stream():
     Uses Vercel for Next.js and GitHub Actions for FastAPI.
 
 📜 Architecture Diagram (MermaidJS)
+graph TD; DevCommit-->GitHubActions GitHubActions-->RunTests RunTests-->|Pass| DeployToAWSLambda DeployToAWSLambda-->Vercel[Deploy Next.js Frontend] 💡 Key Innovation Automates CI/CD pipelines to deploy AI-driven microservices seamlessly.
+
 💡 Key Innovation
 
 Automates CI/CD pipelines to deploy AI-driven microservices seamlessly.
