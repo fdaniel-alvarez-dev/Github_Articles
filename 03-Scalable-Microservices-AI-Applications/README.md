@@ -1,6 +1,6 @@
 🚀 Scalable Microservices for AI-Driven Applications
 
-"How NBCUniversal can leverage microservices to scale AI-powered content delivery across TV, film, and theme parks!"
+"How StreamOasis can leverage microservices to scale AI-powered content delivery across TV, film, and theme parks!"
 
 🧩 The Big Picture: Why Microservices?
 
