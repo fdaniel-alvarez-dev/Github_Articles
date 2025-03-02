@@ -1,6 +1,8 @@
 Advanced Testing & CI/CD for AI-powered APIs
 
-Here’s a GitHub post demonstrating expertise in Advanced Testing & CI/CD for AI-powered APIs, aligned with StreamOasis’s Software Engineer (Generative AI) role​
+Here’s a GitHub post demonstrating expertise in Advanced Testing & CI/CD for AI-powered APIs, aligned with StreamOasis’s Software Engineer (Generative AI) role.
+Mocking and Testing AI Responses
+
 import pytest
 from fastapi.testclient import TestClient
 from unittest.mock import patch
@@ -18,12 +20,14 @@ def test_ai_response(mock_call):
     assert response.status_code == 200
     assert response.json() == {"message": "Welcome to Universal Studios!"}
 
-🔹 Mocks AI calls to prevent API failures from external dependencies.
-🔹 Verifies expected LLM responses in real-time applications.
+    Mocks AI calls to prevent API failures from external dependencies.
+    Verifies expected LLM responses in real-time applications.
 
-2️⃣ CI/CD: Automated API Testing & Security Scans
+CI/CD: Automated API Testing & Security Scans
+
 📌 Goal: Run tests automatically on every pull request using GitHub Actions.
-📜 .github/workflows/ci.yml
+GitHub Actions Workflow: .github/workflows/ci.yml
+
 name: API CI Pipeline
 
 on: [push, pull_request]
@@ -54,12 +58,13 @@ jobs:
         with:
           target: "http://localhost:8000"
 
-🔹 Ensures every commit runs unit tests + security scans.
-🔹 Integrates OWASP ZAP for vulnerability detection (e.g., SQLi, XSS).
+    Ensures every commit runs unit tests and security scans.
+    Integrates OWASP ZAP for vulnerability detection (e.g., SQLi, XSS).
 
-3️⃣ Load Testing: Simulating High Traffic on Streaming APIs
+Load Testing: Simulating High Traffic on Streaming APIs
+
 📌 Goal: Simulate API traffic spikes (e.g., 10K req/sec during a live show launch on Peacock).
-📜 locustfile.py (Load Test)
+Load Test Script: locustfile.py
 
 from locust import HttpUser, task, between
 
@@ -71,31 +76,20 @@ class MediaAPITestUser(HttpUser):
         """Simulates concurrent users requesting AI-driven recommendations."""
         self.client.get("/recommend-movie?user_id=1234")
 
-🔹 Simulates 10K+ concurrent requests to stress-test AI APIs.
-🔹 Helps optimize response times to stay below 3s latency.
+    Simulates 10K+ concurrent requests to stress-test AI APIs.
+    Helps optimize response times to stay below 3s latency.
 
-💡 Traditional CI/CD vs AI-Native CI/CD
-Aspect
-Traditional CI/CD
-AI-Native CI/CD (NBCU)
-Test Coverage
-Focuses on standard API endpoints
-Includes AI model behavior testing
-Mocking
-Basic API stubs
-AI-specific mocking for LLM calls
-Performance
-Load testing only
-AI inference time benchmarks
-Security
-Standard OWASP scans
-AI-related attack vectors (prompt injection)
+Traditional CI/CD vs AI-Native CI/CD
+Aspect 	Traditional CI/CD 	AI-Native CI/CD (NBCU)
+Test Coverage 	Focuses on standard API endpoints 	Includes AI model behavior testing
+Mocking 	Basic API stubs 	AI-specific mocking for LLM calls
+Performance 	Load testing only 	AI inference time benchmarks
+Security 	Standard OWASP scans 	AI-related attack vectors (prompt injection)
+Next Steps
 
-📢 Next Steps
-🔹 Clone the Repo & Run Tests: [GitHub Repo Link]
-🔹 Try a Load Test Locally:
-locust -f locustfile.py --host=http://localhost:8000
+    Clone the Repo & Run Tests: GitHub Repo Link
+    Try a Load Test Locally:
 
-🔹 Deploy Securely with CI/CD → Automate testing, scanning, & deployment!
+    locust -f locustfile.py --host=http://localhost:8000
 
-This post demonstrates deep expertise in AI-powered API testing & CI/CD, directly aligned with StreamOasis’s tech challenges​
+    Deploy Securely with CI/CD → Automate testing, scanning, & deployment!
